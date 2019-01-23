@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mkn>
+	<commonServer>
+		<server>STAGING</server>
+		<portAdapter>8957</portAdapter>
+		<maxThreads>1024</maxThreads>
+		<minThreads>10</minThreads>
+		<lowThreads>320</lowThreads>
+		<maxQueued>-1</maxQueued> <!-- -1 never reject -->
+		<maxTotalConnections>10000</maxTotalConnections>
+		<!-- timeout MiliSecond to upline/agen, otomax has it own timeout to downline, don't set below that value, to avoid suspect response, default set twice from otomax timeout -->
+		<maxIoIdleTimeMs>320000</maxIoIdleTimeMs>
+		<pathUri>/api_testing/</pathUri>
+		<sessionTtl>1800</sessionTtl> <!--in second, 1800 = 30 minute-->
+		<timeRemoveBeforeSessionDelete>30000</timeRemoveBeforeSessionDelete> <!--in ms, 120000 = 2 minute-->
+	</commonServer>
+    <databasePgsql>
+        <ip>172.16.50.140</ip>
+	    <port>5432</port>
+	    <database></database>
+        <user></user>
+        <password></password>
+    </databasePgsql>
+	<databasePgsqlLog>
+		<ip>172.16.50.140</ip>
+		<port>5432</port>
+		<database></database>
+		<user></user>
+		<password>2nd2Sn6v</password>
+	</databasePgsqlLog>
+	<databaseMysql>
+        <ip>172.16.50.141</ip>
+	    <port>3306</port>
+	    <database></database>
+        <user></user>
+        <password></password>
+    </databaseMysql>
+	<encryption>
+		<key>1234567890123456</key> <!--&%yhdk()83h$#ksP-->
+        <iv>1234567890123456;</iv> <!--L&hgYr)$!&nxbTH&-->
+		<keyDb>4ss4l4mu4l41kumw4r0hm4tull4h&#33;.wb</keyDb>
+		<!-- true/false -->
+		<encRequest>true</encRequest>
+		<encResponse>true</encResponse>
+	</encryption>
+	<misc>
+		<scaleImgSize>200</scaleImgSize>
+		<!-- true/false -->
+		<logStream>true</logStream>
+		<masterFolder></masterFolder>
+		<ipService>127.0.0.1</ipService> <!-- isi ip service ip staging atau ip prod, ex : ip localhost 127.0.0.1 -->
+	</misc>
+	<ftpServerInventory>
+		<ip></ip>
+	    <port>21</port>
+		<user></user>
+        <password></password>
+		<path>/devel/</path> <!--devel "/devel/", prod "/prod/"-->
+	</ftpServerInventory>
+	<ottoPay>
+		<initiator></initiator>
+		<key>UEvwV+7vVmLYlrdu3mhTRla56AsGP1XxJWMXZpnoh4s=</key>
+		<inqurl></inqurl>
+		<payurl></payurl>
+		<additionalData>Layanan Pelanggan Hubungi</additionalData>
+	</ottoPay>
+	<validation>
+		<sendkey>Th1s_0nLy_F0uR_t3sT1nG__</sendkey>
+	</validation>
+	<baseApi>
+		<username></username>
+		<key></key>
+		<idaccount></idaccount>
+		<url></url>
+		<reverseUrl></reverseUrl>
+	</baseApi>
+</mkn>
